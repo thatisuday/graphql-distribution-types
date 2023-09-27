@@ -1,0 +1,32 @@
+{
+  "name": "schema-stitching",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:schema-merge": "node schema-merge/server.js",
+    "start:schema-stitching::book-service": "node schema-stitching/book-service.js",
+    "start:schema-stitching::author-service": "node schema-stitching/author-service.js",
+    "start:schema-stitching::gateway-service": "node schema-stitching/gateway-service.js",
+    "start:federation::book-service": "node federation/book-service.js",
+    "start:federation::author-service": "node federation/author-service.js",
+    "start:federation::router": "./federation/router --supergraph=federation/supergraph.graphql --dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.9.3",
+    "@apollo/subgraph": "^2.5.5",
+    "@graphql-tools/executor-http": "^1.0.2",
+    "@graphql-tools/schema": "^10.0.0",
+    "@graphql-tools/stitch": "^9.0.3",
+    "@graphql-tools/wrap": "^10.0.1",
+    "apollo-log": "^1.1.0",
+    "concurrently": "^8.2.1",
+    "graphql": "^16.8.1",
+    "graphql-tag": "^2.12.6",
+    "pm2": "^5.3.0"
+  }
+}
